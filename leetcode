@@ -1,0 +1,25 @@
+//optimize solution with O(n)
+class Solution {
+    public int maxProfit(int[] prices) {
+        int minBuy = Integer.MAX_VALUE,maxresult=0;
+        for(int i=0; i<prices.length; i++){
+            minBuy = Math.min(minBuy, prices[i]);
+            maxresult = Math.max(maxresult, prices[i]-minBuy);
+        }
+        return maxresult;
+    }
+}
+
+// brute force solution with huge runtime O(n^2)
+class Solution {
+    public int maxProfit(int[] prices) {
+        int result = 0;
+        for(int i=0; i< prices.length; i++){
+            for(int j=i+1; j< prices.length; j++){
+                result = Math.max(result,(prices[j]-prices[i]));
+                if(result <0) result = 0;
+            }
+        }
+        return result;
+    }
+}
