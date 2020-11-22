@@ -6,6 +6,9 @@ class Solution {
         return Math.min(cost[cost.length-1],cost[cost.length-2]);
     }
 }
+//  Runtime: 1 ms, faster than 72.06% of Java online submissions for Min Cost Climbing Stairs.
+// Memory Usage: 38.5 MB, less than 89.43% of Java online submissions for Min Cost Climbing Stairs.
+
 // second solution
 class Solution {
     public int minCostClimbingStairs(int[] cost) {
@@ -19,3 +22,5 @@ class Solution {
         return Math.min(step1,step2);
     }
 }
+// Runtime: 1 ms, faster than 72.06% of Java online submissions for Min Cost Climbing Stairs.
+// Memory Usage: 39 MB, less than 26.30% of Java online submissions for Min Cost Climbing Stairs.
